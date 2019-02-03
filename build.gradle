@@ -24,3 +24,15 @@ python {
     pip 'apache-airflow:1.10.2'
     pip 'requests:2.21.0'
 }
+
+task clean() {
+    println "Not implemented"
+}
+
+task test() {
+    println "Not implemented"
+}
+
+task coverage() {
+    println "Not implemented"
+}
