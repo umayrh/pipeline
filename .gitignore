@@ -1,0 +1,27 @@
+# Gradle
+.gradle
+**/build
+**/.project
+**/.settings
+
+# IntelliJ
+.idea/*
+*.iml
+*/*/out/production/*
+*/*/out/test/*
+
+# OSX
+.DS_Store
+./*/.DS_Store
+
+# Python
+**/*.pyc
+activate
+
+.coverage
+coverage.xml
+htmlcov/
+
+# databases and logs
+**/metastore_db
+**/derby.log

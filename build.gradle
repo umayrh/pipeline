@@ -1,0 +1,26 @@
+version = "0.1.0"
+description = "Data pipeline for evaluating contractual report compliance"
+
+buildscript {
+    repositories {
+       jcenter()
+    }
+    dependencies {
+        classpath 'ru.vyarus:gradle-use-python-plugin:1.2.0'
+    }
+}
+
+apply plugin: "idea"
+apply plugin: 'ru.vyarus.use-python'
+
+idea {
+    module {
+        sourceDirs += file('src')
+        testSourceDirs += file('test')
+    }
+}
+
+python {
+    pip 'apache-airflow:1.10.2'
+    pip 'requests:2.21.0'
+}
