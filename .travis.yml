@@ -22,8 +22,8 @@ install:
   - source ${GLOBAL_ENV_FILE}
   - ./gradlew --console=plain clean build
 
-after_success:
-  - coveralls
+# after_success:
+#  - coveralls
 
 jdk:
   - oraclejdk8
