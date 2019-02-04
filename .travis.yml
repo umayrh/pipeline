@@ -45,4 +45,4 @@ branches:
     - master
 notifications:
   email:
-    - umayrh@gmail.com,jhaskell@gmail.com
+    - umayrh@gmail.com
