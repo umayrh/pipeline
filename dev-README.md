@@ -13,6 +13,8 @@
 
 * Ensure that all dags are present before starting the webserver and scheduler.
   Otherwise they may not be reread.
+* Remove example dags by setting `load_examples = False` in airflow.cfg
+* 
 
 #### References
 
@@ -24,8 +26,12 @@
 
 #### Building, packaging, running
 
-For details, see [here](https://atlas.apache.org/InstallationSteps.html).
+Atlas 1.1.0 dependencies, implied [here](https://atlas.apache.org/EclipseSetup.html) are:
+* Java 8 (Update 151) or above (JAVA_HOME is set)
+* Python 2.7
+* Maven 3.3.9
 
+Steps for building, packaging, and running are:
 * `brew install maven`
 * `wget http://mirrors.sonic.net/apache/atlas/1.1.0/apache-atlas-1.1.0-sources.tar.gz`
 * `tar xvfz apache-atlas-1.1.0-sources.tar.gz`
@@ -72,9 +78,15 @@ For details, see [here](https://atlas.apache.org/InstallationSteps.html).
     stopping master........
     ```
 
+#### References
+
+* https://atlas.apache.org/InstallationSteps.html
+* https://atlas.apache.org/QuickStart.html
+* https://atlas.apache.org/Architecture.html
+
 #### Notes
 
-* For Atlas 1.1.0, Java 8 (Update 151) or above is required.
+* `atlas_start.py` may take a minute to start the server.
 
 ## TODO
 
