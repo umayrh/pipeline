@@ -13,14 +13,27 @@
 
 * Ensure that all dags are present before starting the webserver and scheduler.
   Otherwise they may not be reread.
-* Remove example dags by setting `load_examples = False` in airflow.cfg
-* 
+* Remove example DAGs by setting `load_examples = False` in airflow.cfg
+* If a DAG doesn't run:
+  * Is the DAG [unpaused](https://stackoverflow.com/questions/38200493/scheduling-airfflow-dag-job)?
+  ```
+  By default every dag that is created is at "pause" mode. This is defined in your "airflow.cfg" file. You can unpause your dag by
+ 
+  $ airflow unpause test-air
+  and retry again with the scheduler.
+ 
+  You can also toggle your dag on/off from the Airflow webUI (by default it is off)
+  ```
+ 
+
 
 #### References
 
 * https://github.com/ananthdurai/airflow-training
 * https://airflow.apache.org/installation.html
 * https://gist.github.com/msumit/40f7905d409fe3375c9a01fa73070b73
+* https://stlong0521.github.io/20161023%20-%20Airflow.html
+* https://airflow.apache.org/faq.html
 
 ### Apache Atlas
 
