@@ -21,7 +21,7 @@ idea {
 }
 
 python {
-    pip 'apache-airflow:1.10.2'
+    pip 'apache-airflow[celery,s3]:1.10.2'
     pip 'requests:2.21.0'
 }
 
