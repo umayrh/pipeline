@@ -101,6 +101,58 @@ Steps for building, packaging, and running are:
 
 * `atlas_start.py` may take a minute to start the server.
 
+### Sismics Docs
+
+#### Building, running
+
+* `axel https://github.com/sismics/docs/archive/v1.6.tar.gz`
+* `tar xzvf docs-1.6.tar.gz`
+* `cd docs-1.6`
+* `mvn clean -DskipTests install`
+  ```
+  [INFO] ------------------------------------------------------------------------
+  [INFO] Reactor Summary for Docs Parent 1.6-SNAPSHOT:
+  [INFO] 
+  [INFO] Docs Parent ........................................ SUCCESS [  3.662 s]
+  [INFO] Docs Core .......................................... SUCCESS [02:08 min]
+  [INFO] Docs Web Commons ................................... SUCCESS [ 36.673 s]
+  [INFO] Docs Web ........................................... SUCCESS [ 52.451 s]
+  [INFO] ------------------------------------------------------------------------
+  [INFO] BUILD SUCCESS
+  [INFO] ------------------------------------------------------------------------
+  [INFO] Total time:  03:41 min
+  [INFO] Finished at: 2019-02-09T16:29:29-08:00
+  [INFO] ------------------------------------------------------------------------
+  ```
+* `cd docs-web`
+* `mvn jetty:run`
+* Navigate to `http://localhost:8080/docs-web/src` using user and password `admin`
+
+
+To create a deployable WAR file:
+* `mvn -Pprod -DskipTests clean install`
+* `ls docs-web/target`
+
+#### References
+
+* https://github.com/sismics/docs
+* https://demo.sismicsdocs.com/apidoc/
+* https://www.mayan-edms.com/demo/
+
+#### Notes
+
+* Document vs file:
+  * Document is akin to a folder, so a document may 'contain' multiple files. 
+
+### Docker
+
+#### References
+
+* https://docs.docker.com/get-started/
+* https://docs.docker.com/docker-for-mac/
+* https://docs.travis-ci.com/user/docker/#using-a-docker-image-from-a-repository-in-a-build
+* https://labs.play-with-docker.com
+
 ## TODO
 
 #### CI
