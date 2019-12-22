@@ -1,4 +1,4 @@
-# contract-compliance-pipeline
+# pipeline
 
-Data pipeline for evaluating contractual report compliance
+Data pipeline template
 
