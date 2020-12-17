@@ -153,7 +153,7 @@ setup(
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     install_requires=[
-        "apache-airflow==1.10.6",
+        "apache-airflow==1.10.14",
         "requests==2.21.0"
     ],
     entry_points={}
