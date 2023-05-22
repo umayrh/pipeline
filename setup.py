@@ -154,7 +154,7 @@ setup(
     long_description_content_type='text/markdown',
     install_requires=[
         "apache-airflow==1.10.6",
-        "requests==2.21.0"
+        "requests==2.31.0"
     ],
     entry_points={}
 )
